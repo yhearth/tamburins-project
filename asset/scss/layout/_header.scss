@@ -1,0 +1,91 @@
+
+
+header{
+    position: fixed;top: 0;left: 0;
+    width: 100%;
+    color:#fff;
+    z-index: 100;
+    opacity: 0;
+    .header_area{
+        padding: 0 5vw;box-sizing: border-box;
+        overflow: hidden;
+        .logo{
+            float: left;
+            a{
+                display: block;
+                width: 150px;height: 20px;
+                padding:25px 0;
+            }
+            svg{width: 100%;height: 100%;fill:#fff}
+        }
+        .mv_perfume{
+            position: absolute;
+            top: 50%;left: 50%;transform: translate(-50%, -50%);
+            font-size: 12px;
+            line-height: 70px;
+            font-weight: 400;
+            @media (max-width:767px){
+                display: none;
+            }
+        }
+        .utile_group{
+            float: right;
+            overflow: hidden;
+            @media(max-width:$mobile){ display: none;}
+            
+            a{
+                display: block;
+                float: left;
+                margin-right:2vw;
+                line-height: 70px;//
+                font-size: 12px;font-weight: 300;
+                &.ic_cart{
+                   margin-right: 0;
+                   margin-top: 5px;
+                   svg{width: 20px;height: 20px;fill:#fff;}
+                }
+            }
+        }
+        .menu{
+            display: none;
+            position: absolute;
+            top: 16px;right: 5vw;
+            width: 38px;height: 38px;
+            @media(max-width:$mobile){ display: block;}
+            i{
+               display: block;
+              position: absolute;
+              left: 50%;transform: translateX(-50%);
+                width: 60%;height: 2px;
+                background-color: #fff;
+                &:nth-child(1){top: 30%;}
+                &:nth-child(2){top: 50%;}
+                &:nth-child(3){top: 70%;}
+            }
+        }
+        &::after{
+            content: '';
+            display: block;
+            width: 100%;height: 70px;
+            background-color: #000;
+            position: absolute;
+            top:-100%;left: 0;
+            z-index: -1;  
+            
+            transition: all .5s ease ;
+        }
+        &.on::after{top: 0;}
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

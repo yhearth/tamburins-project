@@ -1,0 +1,71 @@
+
+.footer_area{
+    position: relative;
+    background-color: #000;
+    color:#fff;
+    .notice_group{
+        text-align: center;
+        display: flex;
+        justify-content:center;
+        padding: 120px 0;
+        border-top:1px solid #ccc;
+        .notice{
+            .tit{
+                font-size: clamp(14px ,1.5vw,18px);
+                font-weight:500;
+                margin-bottom:5vw;
+            }
+            .item{
+                display: block;
+                font-size: clamp(12px ,1vw,16px);//
+                margin-bottom: 5vw;
+                font-weight: 300;
+                line-height: 1.5;
+            }
+        }
+        // .service_wrap{}
+        .notice_wrap{ margin: 0 10vw;}
+        // .social_wrap{}
+    }
+    .corp_group{
+        border-top:1px solid #555;
+        padding: 60px 0; box-sizing: border-box;
+        width: 100%;margin: 0 auto;
+        text-align: center;
+
+        @media(max-width:$tablet){padding:10vw;}
+        @media(max-width:$mobile){padding:10vw 5vw;}
+        
+        .addr_wrap{
+            display: block;
+            font-size: clamp(12px ,1vw,16px);//
+            margin-bottom: 22px;
+            font-weight: 300;
+            line-height: 1.8;
+            color:rgb(205, 205, 205);
+            @media(max-width:$tablet){margin-bottom: 0;}
+            @media(max-width:$mobile){display: flex; flex-direction: column;width: 100%;}
+            span{
+                border-right:1px solid #555;
+                padding: 0 10px;
+                &:last-child{border-right: 0px;}
+                @media(max-width:$mobile){border:none}
+            }
+
+        }
+        .patment{
+            display: block;
+            margin: 10vw 0;
+            font-size: clamp(12px ,1vw,16px);//
+            font-weight: 300;
+            line-height: 1.5;
+            @media(max-width:$mobile){width: 60%;margin: 10vw auto;}
+        }
+        .corp_wrap{
+            font-size: clamp(12px ,1vw,16px);
+            font-weight: 500;
+            .company{display: inline-block;margin-right: 10px;}
+        }
+
+    }
+}
