@@ -54,12 +54,11 @@
 
 
 //페이지 로딩 될떄
-    $(window).load(function(){
-        $('header').delay(1500).animate({opacity : '1'},500,);
-        $('.landing_bg').addClass('on');
-        $landingIntroTit.delay(1000).animate({opacity:'1',top:'0'},1500,'swing')
-        $landingIntroSub.delay(2000).animate({opacity:'1'},1000,'swing')
-    })
+    $(window).load(function(){})
+    $('header').delay(1000).animate({opacity : '1'},500,);
+    $('.landing_bg').addClass('on');
+    $landingIntroTit.delay(1000).animate({opacity:'1',top:'0'},1500,'swing')
+    $landingIntroSub.delay(2000).animate({opacity:'1'},1000,'swing')
 
 //스크롤시 움직임
     $(window).scroll(function(){
