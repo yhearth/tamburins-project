@@ -363,8 +363,9 @@ header .header_area.on::after {
   top: 0;
   left: 0;
   width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
   transform: scale(1.4);
   opacity: 80%;
 }
@@ -404,8 +405,6 @@ header .header_area.on::after {
 .landing_area .sc_intro .title_wrap .title {
   position: relative;
   width: 100%;
-  height: 230px;
-  overflow: hidden;
   font-size: clamp(40px, 3.2vw, 62px);
   font-weight: 600;
   letter-spacing: 3px;
@@ -414,20 +413,9 @@ header .header_area.on::after {
   display: flex;
   flex-direction: column;
 }
-@media (max-width: 1920px) {
-  .landing_area .sc_intro .title_wrap .title {
-    height: 200px;
-  }
-}
-@media (max-width: 1024px) {
-  .landing_area .sc_intro .title_wrap .title {
-    height: 150px;
-  }
-}
 @media (max-width: 767px) {
   .landing_area .sc_intro .title_wrap .title {
     font-size: 28px;
-    height: 100px;
   }
 }
 .landing_area .sc_intro .title_wrap .sub {
