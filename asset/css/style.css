@@ -279,19 +279,20 @@ header .header_area .utile_group {
     display: none;
   }
 }
-header .header_area .utile_group a {
-  display: block;
+header .header_area .utile_group li {
   float: left;
-  margin-right: 2vw;
   line-height: 70px;
   font-size: 12px;
   font-weight: 300;
 }
-header .header_area .utile_group a.ic_cart {
-  margin-right: 0;
-  margin-top: 5px;
+header .header_area .utile_group li:not(:nth-child(4)) {
+  margin-right: 2vw;
 }
-header .header_area .utile_group a.ic_cart svg {
+header .header_area .utile_group li a.ic_cart {
+  display: block;
+  margin-top: 2px;
+}
+header .header_area .utile_group li a.ic_cart svg {
   width: 20px;
   height: 20px;
   fill: #fff;
@@ -812,7 +813,7 @@ header .header_area.on::after {
   width: 16%;
   font-size: clamp(22px, 2vw, 36px);
   font-weight: 500;
-  line-height: 1.2;
+  line-height: 1.5;
   margin-bottom: 20px;
 }
 @media (max-width: 1024px) {
@@ -831,7 +832,7 @@ header .header_area.on::after {
   top: 22vw;
   right: 5vw;
 }
-.perfume_area .sc_collection .contrl a {
+.perfume_area .sc_collection .contrl button {
   color: rgb(114, 114, 114);
 }
 .perfume_area .sc_collection .contrl .swiper-button-prev {

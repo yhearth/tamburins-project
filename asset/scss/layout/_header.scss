@@ -32,17 +32,14 @@ header{
             float: right;
             overflow: hidden;
             @media(max-width:$mobile){ display: none;}
-            
-            a{
-                display: block;
+            li{
                 float: left;
-                margin-right:2vw;
-                line-height: 70px;//
+                line-height: 70px;
                 font-size: 12px;font-weight: 300;
-                &.ic_cart{
-                   margin-right: 0;
-                   margin-top: 5px;
-                   svg{width: 20px;height: 20px;fill:#fff;}
+                &:not(:nth-child(4)){margin-right: 2vw;}
+                a.ic_cart{
+                    display: block;margin-top: 2px;
+                   svg{width: 20px;height:20px;fill:#fff;}
                 }
             }
         }
