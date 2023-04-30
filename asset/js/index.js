@@ -1,7 +1,6 @@
 (function($){
     console.log('TAMBURINS page Load');
 
-
     $landing = $('.landing_area');
     $landingIntro = $landing.find('.sc_intro');
     $landingSum= $landing.find('.sc_sum');
@@ -30,7 +29,7 @@
     $cateGallery = $cateAre.find('.cateGallery');
     $cateGallImg = $cateGallery.find('.cateGallery .img_wrap');
 
-//커서 위치 잡기
+//cursor
     $('body').mousemove(function(e){
         xVal = e.clientX - 25;
         yVal = e.clientY - 25;
@@ -39,7 +38,7 @@
             x:xVal,y:yVal
         })
     })
-//링크 아이템
+//link mouseover
     $linkItem.mouseover(function(){
         $(this).addClass('on').siblings().removeClass('on');
     })
@@ -47,14 +46,7 @@
         $(this).removeClass('on');
     })
 
-
-
-////////////////////////////////////////////////////////////////////////////////
-
-
-
 //페이지 로딩 될떄
-    $(window).load(function(){})
     $('header').delay(1000).animate({opacity : '1'},500,);
     $('.landing_bg').addClass('on');
     $landingIntroTit.delay(1000).animate({opacity:'1',top:'0'},1500,'swing')
@@ -94,13 +86,11 @@
         if(curr >= blamTxtTg + $perfumeSlid.height()){
             $blamTxt.addClass('on');
         }
-        
 
     })
 $(window).trigger('scroll')
 
-//ketgroup 마우스 오버
-
+//ketgroup
     $keyword.mouseover(function(){
         $('.cursor div').text('');
         gsap.to(".cursor",{
@@ -136,7 +126,6 @@ gsap.fromTo('.img_gallery_v2 .img_bg img',0.7,{
         trigger:'.img_gallery_v2 .img_bg',
         start:"top 100%", 
         end:"bottom top",
-        // markers:true,
         scrub:1,
     },
     scale:1,
@@ -150,7 +139,6 @@ gsap.fromTo($perfumeTxt,2,{
         trigger:$('.sc_perfume'),
         start:"top 50%", 
         end:"top 50%",
-        // markers:true,
         scrub:1,
     },
     background:'rgb(255,255,255)',
@@ -158,7 +146,6 @@ gsap.fromTo($perfumeTxt,2,{
 })
 
 //perfuem mouse cousor
-
 $perfumeMv.mouseover(function(){
     $('.cursor div').text('Play');
     gsap.to(".cursor",{
@@ -185,9 +172,9 @@ $perfumeMv.mouseout(function(){
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev"
         },
-    breakpoints: { //반응형 조건 속성
-        767: { //mobile //767 이상일 경우 
-            slidesPerView: 2, //레이아웃 2열
+    breakpoints: {
+        767: { 
+            slidesPerView: 2,
           },
         1024: { 
             slidesPerView: 3,
@@ -211,7 +198,6 @@ $perfumeSlid.mouseover(function(e){
  })
 
 //퍼퓸밤 마우스 오버
-
 $blamColl.mouseover(function(e){
     $(this).find('img.v2_img').stop().animate({opacity : '1'},300);
     $(this).find('.link_item').css({'transform':'translateY(0vw)',opacity:'1'});
@@ -240,30 +226,12 @@ gsap.fromTo($('.cateGallery .img_wrap'),0.7,{
     opacity:0
 },{
     scrollTrigger:{
-        trigger:$('.cateGallery'),//$cateGallery 이렇게 쓰면 안됨
+        trigger:$('.cateGallery'),
         start:"top 50%", 
         end:"top top",
-        // markers:true,
         scrub:1,
     },
     scale:1,
     opacity:1
 })
-
-
-
-
-
-
-
-
-
-  
-
-
-      
-
-
-
-
 })(jQuery);
