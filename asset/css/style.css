@@ -916,7 +916,6 @@ header .header_area.on::after {
   color: #fff;
   z-index: 3;
   opacity: 0;
-  /*두줄일경우*/
   display: -webkit-box;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1153,11 +1152,11 @@ header .header_area.on::after {
 .category_area {
   position: relative;
   width: 100%;
+  background-color: #fff;
 }
 .category_area .swiper {
   overflow: visible;
   overflow-x: hidden;
-  background-color: rgb(248, 248, 248);
 }
 .category_area .swiper .swiper-wrapper {
   padding-bottom: 160px;
@@ -1224,6 +1223,7 @@ header .header_area.on::after {
 }
 .category_area .swiper .swiper-wrapper .swiper-slide .txt_wrap .link_item {
   border: 1px solid #fff;
+  color: #fff;
   padding: 1.2rem 2.5rem;
 }
 .category_area .swiper .swiper-wrapper .swiper-slide .txt_wrap .link_item.on {
@@ -1502,7 +1502,17 @@ header .header_area.on::after {
   }
 }
 .category_area .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-  margin: 30px var(--swiper-pagination-bullet-horizontal-gap, 1.2vw);
+  margin: 30px var(--swiper-pagination-bullet-horizontal-gap, 30px);
+}
+@media (max-width: 1024px) {
+  .category_area .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 30px var(--swiper-pagination-bullet-horizontal-gap, 20px);
+  }
+}
+@media (max-width: 767px) {
+  .category_area .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 30px var(--swiper-pagination-bullet-horizontal-gap, 15px);
+  }
 }
 .category_area .swiper-pagination {
   bottom: 0;

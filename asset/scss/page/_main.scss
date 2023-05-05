@@ -581,10 +581,10 @@
 .category_area{
     position: relative;
     width: 100%;
+    background-color: #fff;
     .swiper{
         overflow:visible;
         overflow-x: hidden;
-        background-color: rgb(248, 248, 248);
         .swiper-wrapper{
             padding-bottom: 160px;
             @media(max-width:$tablet){ padding-bottom: 120px;}
@@ -626,7 +626,7 @@
                        
                     }
                     .link_item{
-                        border:1px solid #fff;
+                        border:1px solid #fff;color:#fff;
                         padding: 1.2rem 2.5rem;
                         &.on{   background-color: rgba(0, 0, 0, 0.5);}
                     }
@@ -810,7 +810,9 @@
     }
    
     .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
-        margin: 30px var(--swiper-pagination-bullet-horizontal-gap, 1.2vw)
+        margin: 30px var(--swiper-pagination-bullet-horizontal-gap, 30px);
+        @media(max-width:$tablet){         margin: 30px var(--swiper-pagination-bullet-horizontal-gap, 20px);}
+        @media(max-width:$mobile){         margin: 30px var(--swiper-pagination-bullet-horizontal-gap, 15px);}   
       }
     .swiper-pagination{
         bottom: 0;

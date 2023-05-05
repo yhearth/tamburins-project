@@ -8,7 +8,6 @@
     $keywordGp = $keyword.find('.keyword_group');
     $landingIntroTit = $landingIntro.find('.title span');
     $landingIntroSub = $landingIntro.find('.sub');
-
     $aboutAre = $('.sc_about');
     $aboutTxt = $aboutAre.find('.title_wrap');
     $aboutImg = $aboutAre.find('.img_gallery .img_box');
@@ -119,6 +118,7 @@ $(window).trigger('scroll')
     })
 
 
+
 gsap.fromTo('.img_gallery_v2 .img_bg img',0.7,{
     scale:1.5,
 },{
@@ -212,6 +212,7 @@ $blamColl.mouseover(function(e){
  var swiper = new Swiper(".category_area .mySwiper", {
     pagination: {
       el: ".swiper-pagination",
+      type: 'bullets',
       clickable: true,
       renderBullet: function (index, className) {
         return '<span class="' + className + '">' + '<img src = "./asset/img/cate/cate_icon_' +(index+1) + '.png" alt="">'+"</span>";
